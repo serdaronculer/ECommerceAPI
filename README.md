@@ -31,5 +31,10 @@ Bu bir Mini E-Ticaret projesinin arka uç ayağıdır. Bir E-Ticaret uygulaması
  - Generic Repository Pattern
  - PostgreSQL
 
+## Entity Diagram
+Güncel Entity modelleri. (Geçici)
+
+![entity Model](images/entity_model.png)
+
 **Proje güncellendikçe beni oku sayfası güncellenecektir.**
 
