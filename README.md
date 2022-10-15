@@ -26,7 +26,9 @@ Bu bir Mini E-Ticaret projesinin arka uç ayağıdır. Bir E-Ticaret uygulaması
 
 ## Kullanılan Teknolojiler (Mimariler, Tasarımlar Vs.)
  - ASP.NET Core Web API (6.0)
- - [Onion architecture (Soğan Mimarisi)](https://www.gencayyildiz.com/blog/nedir-bu-onion-architecture-tam-teferruatli-inceleyelim/)
+ - Entity Framework Core
+ - Onion architecture
+ - Generic Repository Pattern
  - PostgreSQL
 
 **Proje güncellendikçe beni oku sayfası güncellenecektir.**
