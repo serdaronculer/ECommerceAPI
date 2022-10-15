@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿ using Microsoft.EntityFrameworkCore;
 using ECommerceAPI.Persistance.Contexts;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using ECommerceAPI.Application.Repositories;
+using ECommerceAPI.Persistance.Repositories;
 
 namespace ECommerceAPI.Persistance
 {
@@ -15,11 +17,16 @@ namespace ECommerceAPI.Persistance
 
         public static void AddPersistenceServices(this IServiceCollection service)
         {
-            ConfigurationManager configurationManager = new ConfigurationManager();
-            configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../Presentation/ECommerceAPI.API"));
-            configurationManager.AddJsonFile("appsettings.json");
 
-            service.AddDbContext<ECommerceAPIDbContext>(options => options.UseNpgsql(configurationManager.GetConnectionString("PostgreSQL")));
+            service.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
+            service.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
+            service.AddScoped<IOrderReadRepository, OrderReadRepository>();
+            service.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
+            service.AddScoped<IProductReadRepository, ProductReadRepository>();
+            service.AddScoped<IProductWriteRepository, ProductWriteRepository>();
+
+            service.AddDbContext<ECommerceAPIDbContext>(options => options.UseNpgsql(Configuration.getConnectionString()), ServiceLifetime.Scoped);
+ 
         }
     }
 }
