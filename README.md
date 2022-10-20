@@ -17,7 +17,7 @@
 
 ## Genel Bakış
 
-Bu bir Mini E-Ticaret projesinin arka uç ayağıdır. Bir E-Ticaret uygulamasında ki her türlü özelliği sunacaktır.
+Bu bir Mini E-Ticaret projesinin arka uç ayağıdır. 
 
 ## İçerik
 
@@ -30,9 +30,10 @@ Bu bir Mini E-Ticaret projesinin arka uç ayağıdır. Bir E-Ticaret uygulaması
  - Onion architecture
  - Generic Repository Pattern
  - PostgreSQL
+ - Fluent Validation
 
 ## Entity Diagram
-Güncel Entity modelleri. (Geçici)
+Güncel Entity modelleri.
 
 ![entity Model](images/entity_model.png)
 
